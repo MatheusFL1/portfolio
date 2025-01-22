@@ -1,0 +1,205 @@
+/* Fundo geral com imagem e camada escurecida */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: url('../img/coding-background.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Para o fundo acompanhar o scroll */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh; /* Garante que o site ocupe toda a altura da tela */
+}
+
+/* Camada de escurecimento */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Opacidade para escurecer o fundo */
+  z-index: -1; /* Para garantir que o escurecimento fique abaixo do conteúdo */
+}
+
+/* Cabeçalho e navegação */
+header {
+  background-color: rgba(26, 26, 26, 0.767); /* Fundo com opacidade */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegação */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Seções principais */
+main {
+  padding: 30px 10%;
+}
+
+section {
+  margin-bottom: 50px;
+  text-align: center;
+  background: #00000073; /* Seções com fundo branco e um pouco de transparência */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da seção Sobre Mim */
+#sobre {
+  text-align: center;
+  padding: 50px 20px;
+  color: rgb(255, 255, 255);
+  background: #00000073; /* Fundo transparente, pois a imagem já está no body */
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+#sobre h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Para destacar o texto */
+}
+
+#sobre p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Para destacar o texto */
+}
+
+/* Seção de Projetos */
+#projetos h2 {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.projeto {
+  background: rgba(0, 0, 0, 0.562);
+  padding: 20px;
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 600px;
+}
+
+.projeto h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.projeto p {
+  font-size: 1em;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.projeto a {
+  text-decoration: none;
+  color: white;
+  background-color: #004170;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.projeto a:hover {
+  background-color: #005fa3;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de Contato */
+#contato h2 {
+  font-size: 2em;
+  color: #e9e9e9;
+  margin-bottom: 20px;
+}
+
+#contato p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+#contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contato ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#contato ul li a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#contato ul li a:hover {
+  color: #004170;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 20px 5%;
+  }
+
+  .projeto {
+    margin: 20px auto;
+  }
+}
