@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -146,7 +146,6 @@ button.edit:hover, button.complete:hover {
     color: white;
 }
 
-/* Variáveis de Tema */
 :root {
     --background-color: #f0f0f0;
     --container-background-color: white;

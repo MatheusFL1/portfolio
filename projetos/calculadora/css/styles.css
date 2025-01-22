@@ -15,7 +15,7 @@ body {
 
 .calculadora {
   background-color: #fff;
-  width: 300px; /* Ajusta a largura da calculadora */
+  width: 300px; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ body {
 .visor {
   width: 100%;
   height: 50px;
-  font-size: 2rem; /* Ajuste do tamanho da fonte */
+  font-size: 2rem; 
   text-align: right;
   padding: 10px;
   border: 2px solid #bdc3c7;
@@ -72,7 +72,7 @@ body {
 
 .btn-calcular {
   background-color: #2ecc71;
-  grid-column: span 2; /* O botão de cálculo ocupa duas colunas */
+  grid-column: span 2;
 }
 
 .btn-calcular:hover {
@@ -83,7 +83,6 @@ body {
   background-color: #1e8449;
 }
 
-/* Estilo para o botão de "Apagar" */
 .btn-apagar {
   background-color: #f39c12;
 }
